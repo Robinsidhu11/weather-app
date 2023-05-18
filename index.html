@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" /> -->
+    <link rel="icon" type="image/x-icon" href="./assets/weathericonfav.png.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1 data-heading>WEATHER APP</h1>
+            <!-- tabs -->
+            <div data-tabs>
+                <p data-your_weathertab_button class="tabs_common">Your Weather</p>
+                <p date-search_weathertab_button class="tabs_common">Search Weather</p>
+            </div>
+            <!-- weather entire outer container -->
+            <div>
+                <!-- grant access container -->
+                <div data-grantaccess_container>
+                    <img src="./assets/location.png" width="80px" height="80px" alt="">
+                    <h2>Grant Location Access</h2>
+                    <p id="grant_message">Allow Access To Get Weather Information</p>
+                    <button data-grant_access_button>GRANT ACCESS</button>
+                </div>
+                <!-- type & search button -->
+                <div data-search_input_container>
+                    <input data-inputfield type="text" placeholder="Search for city..">
+                    <button date-search_button>
+                        <img src="./assets/search.png" alt="" width="20px" height="20px">
+                    </button>
+                </div>
+                <!-- loader -->
+                <div data-loader_container>
+                    <img src="./assets/loading.gif" alt="" width="150px" height="150px">
+                    <p>LOADING</p>
+                </div>
+                <!-- not found -->
+                <div data-notfound_container>
+                    <img src="./assets/not-found.png" width="100px" alt="">
+                    <p>City Not Found</p>
+                </div>
+                <!-- Weather info -->
+                <div data-show_weather_info_container>
+                    <div class="flag_city_div">
+                        <p data-city_name></p>
+                        <!--country flag -->
+                        <img data-country_icon >
+                    </div>
+                    <p data-weather_nametype></p>
+                    <!-- weather_image -->
+                    <img data-weather_icon>
+                    <!-- temperature info -->
+                    <h1 data-temperature_info></h1>
+                    <!-- 3 card boxes -->
+                    <div data-3cards>
+                        <!-- card1 wind -->
+                        <div class="carddesign">
+                            <img src="./assets/wind.png" alt="">
+                            <p>WINDSPEED</p>
+                            <p data-windspeed_value>
+
+                            </p>
+                        </div>
+                        <!-- card2 humidity -->
+                        <div class="carddesign">
+                            <img src="./assets/humidity.png" alt="">
+                            <p>HUMIDITY</p>
+                            <p data-humidity_value>
+                                
+                            </p>
+                        </div>
+                        <!-- card3 clouds -->
+                        <div class="carddesign">
+                            <img src="./assets/cloud.png" alt="">
+                            <p>CLOUDS</p>
+                            <p data-cloud_value>
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
